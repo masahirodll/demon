@@ -2,9 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
-** A jupyter-ready version of DeMoN without vtk visualization **
+**A jupyter-ready version of DeMoN without vtk visualization**
 
-** This is a folked project from https://github.com/lmb-freiburg/demon **
+**This is a folked project from https://github.com/lmb-freiburg/demon**
 
 DeMoN is a ConvNet architecture for solving structure from motion from two views.
 It estimates the depth and relative camera motion for pairs of images.
