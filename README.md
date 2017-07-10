@@ -3,7 +3,9 @@
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
 **A jupyter-ready, nvidia-docker version of DeMoN without vtk visualization**
+
 **Intended for personal project, thus not a perfect guide**
+
 **Assume you had already installed nvidia-docker in your machine with CUDA enabled**
 
 **This is a folked project from https://github.com/lmb-freiburg/demon**
