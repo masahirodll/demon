@@ -24,26 +24,11 @@ If you use this code for research please cite:
 
 See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof/depthmotionnet) for the paper and other material.
 
+## run docker 
+```bash
+nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
 
-## Requirements
-
-Building and using requires the following libraries and programs
-
-    tensorflow 1.0.0
-    cmake 3.5.1
-    python 3.5
-    cuda 8.0.44 (required for gpu support)
-    VTK 7.1 with python3 interface (required for visualizing point clouds)
-
-The versions match the configuration we have tested on an ubuntu 16.04 system.
-
-The binary package from [vtk.org](http://www.vtk.org) does not come with a python3 interface.
-To enable python3 support VTK needs to be built from source.
-Alternatively, there are also VTK packages with python3 support available in Anaconda via the conda package manager.
-
-The network also depends on our [lmbspecialops](https://github.com/lmb-freiburg/lmbspecialops) library which is included as a submodule.
-
-
+note that 8880 is a port for jupyter
 
 ## Build instructions
 
@@ -64,11 +49,10 @@ make -j
 # download weights
 cd $DEMON_DIR/weights
 ./download_weights.sh
-
-# run example
-cd $DEMON_DIR/examples
-python3 example.py # opens a window with the depth map (and the point cloud if vtk is available)
 ```
+
+## run example
+After running jupyter, go to example and run myExample.ipynb
 
 ## Data reader op & evaluation
 
