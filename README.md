@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
 **A jupyter-ready, nvidia-docker version of DeMoN without vtk visualization**
+**Intended for personal project, thus not a perfect guide**
+**Assume you had already installed nvidia-docker in your machine with CUDA enabled**
 
 **This is a folked project from https://github.com/lmb-freiburg/demon**
 
@@ -24,43 +26,15 @@ If you use this code for research please cite:
 
 See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof/depthmotionnet) for the paper and other material.
 
-## run docker 
+## run docker
 ```bash
 nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
 ```
 
 note that 8880 is a port for jupyter
 
-## Build instructions
-On dokcer host,
-```bash
-docker ps
-
-# see the container name you just launched (let the name your_containter_name)
-
-docker exec -it [your_container_name] bash
-```
-
-Inside the container,
-```bash
-# clone repo with submodules
-git clone --recursive https://github.com/masahirodll/demon.git
-
-# build lmbspecialops
-DEMON_DIR=$PWD/demon
-mkdir $DEMON_DIR/lmbspecialops/build
-cd $DEMON_DIR/lmbspecialops/build
-cmake .. # add '-DBUILD_WITH_CUDA=OFF' to build without gpu support
-# (optional) run 'ccmake .' here to adjust settings for gpu code generation
-make -j
-
-# download weights
-cd $DEMON_DIR/weights
-./download_weights.sh
-```
-
 ## run example
-After running jupyter, go to example and run myExample.ipynb
+After running jupyter, go to example/ and run myExample.ipynb
 
 ## Data reader op & evaluation
 
