@@ -5,9 +5,12 @@ from matplotlib import pyplot as plt
 import os
 import sys
 
-examples_dir = os.path.dirname(__file__)
+examples_dir = os.path.dirname('/notebooks/demon/examples/')
 weights_dir = os.path.join(examples_dir,'..','weights')
 sys.path.insert(0, os.path.join(examples_dir, '..', 'python'))
+
+sys.path.append('/notebooks/demon/python')
+sys.path.append('/notebooks/demon/lmbspecialops/python')
 
 from depthmotionnet.networks_original import *
 
