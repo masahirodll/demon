@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
-**A jupyter-ready version of DeMoN without vtk visualization**
+**A jupyter-ready, nvidia-docker version of DeMoN without vtk visualization**
 
 **This is a folked project from https://github.com/lmb-freiburg/demon**
 
@@ -27,12 +27,11 @@ See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof
 ## run docker 
 ```bash
 nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
+```
 
 note that 8880 is a port for jupyter
 
 ## Build instructions
-
-The following commands all run inside the virtualenv:
 
 ```bash
 # clone repo with submodules
