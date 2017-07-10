@@ -2,6 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
+** A jupyter-ready version of DeMoN without vtk visualization **
+** This is a folked project from https://github.com/lmb-freiburg/demon **
+
 DeMoN is a ConvNet architecture for solving structure from motion from two views.
 It estimates the depth and relative camera motion for pairs of images.
 
@@ -43,27 +46,11 @@ The network also depends on our [lmbspecialops](https://github.com/lmb-freiburg/
 
 ## Build instructions
 
-The following describes how to install tensorflow and demon into a new virtualenv and run the inference example.
-We will use ```pew``` (```pip install pew```) to manage a new virtualenv named ```demon_venv``` in the following:
-
-```bash
-# create virtualenv
-pew new demon_venv
-```
-
 The following commands all run inside the virtualenv:
 
 ```bash
-# install python module dependencies
-pip install tensorflow-gpu # or 'tensorflow' without gpu support
-pip install pillow # for reading images
-pip install matplotlib # required for visualizing depth maps
-pip install Cython # required for visualizing point clouds
-```
-
-```bash
 # clone repo with submodules
-git clone --recursive https://github.com/lmb-freiburg/demon.git
+git clone --recursive https://github.com/masahirodll/demon.git
 
 # build lmbspecialops
 DEMON_DIR=$PWD/demon
@@ -71,8 +58,7 @@ mkdir $DEMON_DIR/lmbspecialops/build
 cd $DEMON_DIR/lmbspecialops/build
 cmake .. # add '-DBUILD_WITH_CUDA=OFF' to build without gpu support
 # (optional) run 'ccmake .' here to adjust settings for gpu code generation
-make
-pew add $DEMON_DIR/lmbspecialops/python # add to python path
+make -j
 
 # download weights
 cd $DEMON_DIR/weights
