@@ -34,11 +34,15 @@ note that 8880 is a port for jupyter
 ## Build instructions
 On dokcer host,
 ```bash
+docker ps
+
+# see the container name you just launched (let the name your_containter_name)
+
 docker exec -it [your_container_name] bash
 ```
 
+Inside the container,
 ```bash
-# here, inside the container
 # clone repo with submodules
 git clone --recursive https://github.com/masahirodll/demon.git
 
