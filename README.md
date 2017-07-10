@@ -27,6 +27,7 @@ If you use this code for research please cite:
 See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof/depthmotionnet) for the paper and other material.
 
 ## run docker
+
 ```bash
 nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
 ```
@@ -34,30 +35,11 @@ nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
 note that 8880 is a port for jupyter
 
 ## run example
+
 After running jupyter, go to example/ and run myExample.ipynb
-
-## Data reader op & evaluation
-
-The data reader op and the evaluation code have additional dependencies.
-The code for the data reader is in the ```multivih5datareaderop``` directory. 
-See the corresponding [readme](multivih5datareaderop/README.md) for more details.
-
-For the evaluation see the example [```examples/evaluation.py```](examples/evaluation.py).
-The evaluation code requires the following additional python3 packages, which can be installed with ```pip```:
-
-```
-h5py
-minieigen
-pandas
-scipy
-scikit-image
-xarray
-```
-Note that the evaluation code also depends on the data reader op.
-
-
 
 ## License
 
+All contents belong to their original authors (lmb-freiburg).
 DeMoN is under the [GNU General Public License v3.0](LICENSE.txt)
 
