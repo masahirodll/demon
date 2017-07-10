@@ -41,5 +41,6 @@ After running jupyter, go to example/ and run myExample.ipynb
 ## License
 
 All contents belong to their original authors (lmb-freiburg).
+
 DeMoN is under the [GNU General Public License v3.0](LICENSE.txt)
 
