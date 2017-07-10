@@ -32,8 +32,13 @@ nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
 note that 8880 is a port for jupyter
 
 ## Build instructions
+On dokcer host,
+```bash
+docker exec -it [your_container_name] bash
+```
 
 ```bash
+# here, inside the container
 # clone repo with submodules
 git clone --recursive https://github.com/masahirodll/demon.git
 
