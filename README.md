@@ -10,7 +10,21 @@
 
 **This is a folked project from https://github.com/lmb-freiburg/demon**
 
-DeMoN is a ConvNet architecture for solving structure from motion from two views.
+## run docker
+
+```bash
+nvidia-docker run -it -p 8880:8880 masahirodll/demon-jupyter
+```
+
+note that 8880 is a port for jupyter
+
+## run example
+
+After running jupyter, go to example/ and run myExample.ipynb
+
+## About DeMoN
+
+DeMoN is a ConvNet architecture for solving structure from motion from two views proposed by Ummenhofer et al.
 It estimates the depth and relative camera motion for pairs of images.
 
 ![Teaser](teaser.png)
@@ -28,21 +42,9 @@ If you use this code for research please cite:
 
 See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof/depthmotionnet) for the paper and other material.
 
-## run docker
-
-```bash
-nvidia-docker run -it -p 8880:8880 masahirodll/demon-jupyter
-```
-
-note that 8880 is a port for jupyter
-
-## run example
-
-After running jupyter, go to example/ and run myExample.ipynb
-
 ## License
 
-All contents belong to their original authors (lmb-freiburg).
+All contents belong to original authors (lmb-freiburg).
 
 DeMoN is under the [GNU General Public License v3.0](LICENSE.txt)
 
