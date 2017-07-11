@@ -1,5 +1,3 @@
-# [folked] DeMoN: Depth and Motion Network
-
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
 **A jupyter-ready, nvidia-docker version of DeMoN without vtk visualization**
