@@ -31,7 +31,7 @@ See the [project website](https://lmb.informatik.uni-freiburg.de/people/ummenhof
 ## run docker
 
 ```bash
-nvidia-docker run -it --privileged -p 8880:8880 masahirodll/demon-jupyter
+nvidia-docker run -it -p 8880:8880 masahirodll/demon-jupyter
 ```
 
 note that 8880 is a port for jupyter
